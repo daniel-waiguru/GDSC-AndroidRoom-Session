@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GDSC Mut - Room</string>
+    <string name="no_attendees_found">No Attendee Found!</string>
+    <string name="add_attendee">Add new attendee</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+    <string name="save_attendee">Save Attendee</string>
+</resources>
