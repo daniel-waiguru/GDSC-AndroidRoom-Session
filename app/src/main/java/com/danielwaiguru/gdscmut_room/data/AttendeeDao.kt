@@ -5,13 +5,14 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface AttendeeDao {
+    //Transactions
     @Query("SELECT * FROM attendees")
     fun getAttendees(): Flow<List<Attendee>>
 
     @Query("SELECT * FROM attendees WHERE id = :attendeeId")
     suspend fun getAttendeeById(attendeeId: Long): Attendee?
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addAttendee(attendee: Attendee)
 
     @Update
